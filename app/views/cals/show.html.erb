@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+<h1 align="center">Calculo  do Valor do Toner</h1>
+  <hr width="50%">
+  <div class="container">
+  <ul>
+    <li>
+      <p>
+        <strong>Primeiro Rendimento:</strong>
+        <%= @cal.ryieldi %>
+      </p>
+    </li>
+  
+
+    <li>
+<p>
+  <strong>Seguno Rendimento:</strong>
+  <%= @cal.ryielde %>
+</p>
+<li>
+<p>
+  <strong>Primeira Produção:</strong>
+  <%= @cal.prodi %>
+</p>
+</li>
+<li>
+<p>
+  <strong>Segunda Produção</strong>
+  <%= @cal.prode %>
+</p>
+</li>
+<li>
+<p>
+  <strong>Preço do Contrato:</strong>
+  <%= @cal.cprice %>
+</p>
+</li>
+</ul>
+<div class="alert alert-primary">
+    <strong>
+        <%= @cal.notice_rprice %>
+      </strong>
+  </div>
+</div>
+<div align="center">
+<%= link_to 'Edit', edit_cal_path(@cal) %> |
+<%= link_to 'Back', cals_path %>
+</div>

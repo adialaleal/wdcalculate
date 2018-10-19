@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cals</h1>
+
+<table class="responsive-table centered highlight">
+  <thead>
+    <tr>
+      <th>Primeiro Rendimento</th>
+      <th>Segundo Rendimento</th>
+      <th>Primeira Produção</th>
+      <th>Segunda Produção</th>
+      <th>Preço Página Contrato</th>
+      <th>Área de Cobertura Total</th>
+      <th>Preço Página Atualizado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cals.each do |cal| %>
+      <tr>
+        <td><%= cal.ryieldi %></td>
+        <td><%= cal.ryielde %></td>blue
+        <td><%= cal.prodi %></td>
+        <td><%= cal.prode %></td>
+        <td>R$<%= cal.cprice %></td>
+        <td><%= cal.cover.round(4) %></td>
+        <td><%= cal.rprice.round(5) %></td>
+        <td><%= link_to '<i class="material-icons">remove_red_eye</i>'.html_safe, cal, class:"waves-effect waves-teal btn-small btn-flat light-blue" %></td>
+        <td><%= link_to '<i class="material-icons">format_paint</i>'.html_safe, edit_cal_path(cal), class:"waves-effect waves-teal btn-small btn-flat light-blue" %></td>
+        <td><%= link_to '<i class="material-icons">cancel</i>'.html_safe, cal, class:"waves-effect waves-teal btn-small btn-flat light-yellow", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cal', new_cal_path %>

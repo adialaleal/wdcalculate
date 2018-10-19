@@ -1,0 +1,42 @@
+<%= form_with(model: cal, local: true) do |form| %>
+  <% if cal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cal.errors.count, "error") %> prohibited this cal from being saved:</h2>
+
+      <ul>
+      <% cal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ryieldi %>
+    <%= form.number_field :ryieldi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ryielde %>
+    <%= form.number_field :ryielde %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prodi %>
+    <%= form.number_field :prodi %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prode %>
+    <%= form.number_field :prode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cprice %>
+    <%= form.text_field :cprice %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

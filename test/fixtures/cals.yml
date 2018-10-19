@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ryieldi: 1
+  ryielde: 1
+  prodi: 1
+  prode: 1
+  cprice: 1.5
+
+two:
+  ryieldi: 1
+  ryielde: 1
+  prodi: 1
+  prode: 1
+  cprice: 1.5
