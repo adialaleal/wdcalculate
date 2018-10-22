@@ -12,31 +12,35 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :ryieldi %>
+    <label>Primeiro Rendimento</label>
     <%= form.number_field :ryieldi %>
   </div>
 
   <div class="field">
-    <%= form.label :ryielde %>
+    <label>Segundo Rendimento</label>
     <%= form.number_field :ryielde %>
   </div>
 
   <div class="field">
-    <%= form.label :prodi %>
+    <label>Primeira Produção</label>
     <%= form.number_field :prodi %>
   </div>
 
   <div class="field">
-    <%= form.label :prode %>
+    <label>Segunda Produção</label>
     <%= form.number_field :prode %>
   </div>
 
   <div class="field">
-    <%= form.label :cprice %>
+    <label>Valor do Contrato / Preço Página</label>
     <%= form.text_field :cprice %>
   </div>
+<div align="right">
+  <%= button_tag( :class => "btn-floating btn-large waves-effect waves-light green", :value => "+") do %>+<i class="material-icons"></i>
+<% end %>
+</div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <!--<div class="actions">
+    <%= form.submit '<i class="material-icons">add</i>'.html_safe, class:"btn-floating btn-large waves-effect waves-light green" %>
+  </div> -->
 <% end %>

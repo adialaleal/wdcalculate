@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Cals</h1>
-
+<h1 align="center">Cálculo de Toners</h1>
+<hr width="50%">
+<br>
 <table class="responsive-table centered highlight">
   <thead>
     <tr>
@@ -23,17 +24,18 @@
         <td><%= cal.ryielde %></td>
         <td><%= cal.prodi %></td>
         <td><%= cal.prode %></td>
-        <td>R$<%= cal.cprice %></td>
+        <td>R$<%= cal.pprice.round(5) %></td>
         <td><%= cal.cover.round(4) %></td>
         <td><%= cal.rprice.round(5) %></td>
-        <td><%= link_to '<i class="material-icons">remove_red_eye</i>'.html_safe, cal, class:"waves-effect waves-teal btn-small btn-flat light-blue" %></td>
-        <td><%= link_to '<i class="material-icons">format_paint</i>'.html_safe, edit_cal_path(cal), class:"waves-effect waves-teal btn-small btn-flat light-blue" %></td>
-        <td><%= link_to '<i class="material-icons">cancel</i>'.html_safe, cal, class:"waves-effect waves-teal btn-small btn-flat light-yellow", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '<i class="material-icons">remove_red_eye</i>'.html_safe, cal, class:"waves-effect waves-light btn-small light-blue" %></td>
+        <td><%= link_to '<i class="material-icons">edit</i>'.html_safe, edit_cal_path(cal), class:"waves-effect waves-light btn-small light-orange" %></td>
+        <td><%= link_to '<i class="material-icons">cancel</i>'.html_safe, cal, class:"waves-effect waves-light btn-small red", method: :delete, data: { confirm: 'Deseja realmente excluir este registro?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Cal', new_cal_path %>
+<div align="center">
+<%= link_to '<i class="material-icons">add</i>'.html_safe, new_cal_path, class:"btn-floating btn-large waves-effect waves-light green" %>
+</div>
