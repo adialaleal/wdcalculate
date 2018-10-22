@@ -1,11 +1,11 @@
 class Cal < ApplicationRecord
   #Calculate total yield between two toners that was used in one month.
   def tyield
-    ryieldi + ryielde
+    ryieldi.to_i + ryielde.to_i
   end
   #Calculate total prodution.
   def tprod
-    self.prodi + self.prode
+    self.prodi.to_i + self.prode.to_i
   end
 
   def pdefault
@@ -13,7 +13,7 @@ class Cal < ApplicationRecord
   end
   #Calculate cover percent.
   def cover
-    (tyield.to_f * pdefault) / tprod.to_f
+    (tyield.to_f * pdefault.to_f) / tprod.to_f
   end
 
   def pprice
